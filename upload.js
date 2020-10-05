@@ -3,11 +3,11 @@ $(document).ready(function(){
 
     const urlParams = new URLSearchParams(window.location.search);
     const code = urlParams.get('code');
-    const redirect_uri = "http://localhost/SSD-Project/upload.html" // replace with your redirect_uri;
-    const client_secret = "MB0C782xlULBimKVxGrh1RoA"; // replace with your client secret
+    const redirect_uri = "http://localhost/SSD-Project/upload.html" 
+    const client_secret = "MB0C782xlULBimKVxGrh1RoA"; 
     const scope = "https://www.googleapis.com/auth/drive";
     var access_token= "";
-    var client_id = "873763726303-ocb5kv80s8do7hv94ls17a4od4tlcgs7.apps.googleusercontent.com"// replace it with your client id;
+    var client_id = "873763726303-ocb5kv80s8do7hv94ls17a4od4tlcgs7.apps.googleusercontent.com"
     
 
     $.ajax({
@@ -57,7 +57,6 @@ $(document).ready(function(){
         var that = this;
         var formData = new FormData();
     
-        // add assoc key values, this will be posts values
         formData.append("file", this.file, this.getName());
         formData.append("upload_file", true);
     
@@ -101,7 +100,6 @@ $(document).ready(function(){
         if (event.lengthComputable) {
             percent = Math.ceil(position / total * 100);
         }
-        // update progressbars classes so it fits your code
         $(progress_bar_id + " .progress-bar").css("width", +percent + "%");
         $(progress_bar_id + " .status").text(percent + "%");
     };
@@ -109,10 +107,6 @@ $(document).ready(function(){
     $("#upload").on("click", function (e) {
         var file = $("#files")[0].files[0];
         var upload = new Upload(file);
-    
-        // maby check size or type here with upload.getSize() and upload.getType()
-    
-        // execute upload
         upload.doUpload();
     });
 

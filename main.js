@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    var clientId ="873763726303-ocb5kv80s8do7hv94ls17a4od4tlcgs7.apps.googleusercontent.com" //ENTER YOUR CLIENT ID FROM THE GOOGLE DEVELOPER CONSOLE
+    var clientId ="873763726303-ocb5kv80s8do7hv94ls17a4od4tlcgs7.apps.googleusercontent.com" 
 
     var redirect_uri="http://localhost/SSD-Project/upload.html"
 
